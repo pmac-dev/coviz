@@ -1,0 +1,105 @@
+{% extends base %}
+
+{% block title %}Coviz{% endblock %}
+
+{% block postamble %}
+  <style>
+    {% include 'assets/css/main.css' %}
+  </style>
+{% endblock %}
+
+{% block contents %}
+  <div id="wrapper" class="divided">
+
+  	<section class="banner style2 orient-center content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right" id="section1">
+                <div class="content">
+			<header>
+	                        <h2>Coviz</h2>
+				<p>Visualizing the Covid19 data for Portugal</p>
+			</header>
+			<div class="content2">{{ embed(roots.section1) }}</div>
+			<div style="display: flex; justify-content: flex-end">{{ embed(roots.section1_controls) }}</div>
+			<ul class="actions small">
+                                <li><a href="#section2" class="button smooth-scroll small primary">Next &darr;</a></li>
+                       </ul>
+		</div>
+                <div class="image">
+                        <!-- <img src="images/banner.jpg" alt="" /> -->
+                </div>
+        </section>
+
+  	<section class="banner style2 orient-center content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right" id="section2">
+                <div class="content-custom">
+			<header>
+	                        <h2>Coviz</h2>
+				<p>Visualizing the Covid19 data for Portugal</p>
+			</header>
+			<div class="content2">{{ embed(roots.section2) }}</div>
+			<div style="display: flex; justify-content: flex-end">{{ embed(roots.section2_controls) }}</div>
+			<ul class="actions small">
+                                <li><a href="#section3" class="button smooth-scroll small primary">Next &darr;</a></li>
+                                <li><a href="#section1" class="button smooth-scroll small primary">Previous &uarr;</a></li>
+                       </ul>
+		</div>
+                <div class="image">
+                        <!-- <img src="images/banner.jpg" alt="" /> -->
+                </div>
+        </section>
+
+	<section class="banner style2 orient-center content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right" id="section3">
+                <div class="content-custom">
+			<header>
+	                        <h2>Coviz</h2>
+				<p>Visualizing the Covid19 data for Portugal</p>
+			</header>
+			<div class="content2">{{ embed(roots.section3) }}</div>
+			<ul class="actions small">
+                                <li><a href="#section4" class="button smooth-scroll small primary">Next &darr;</a></li>
+                                <li><a href="#section2" class="button smooth-scroll small primary">Previous &uarr;</a></li>
+                       </ul>
+		</div>
+                <div class="image">
+                        <!-- <img src="images/banner.jpg" alt="" /> -->
+                </div>
+        </section>
+
+
+	<section class="banner style2 orient-center content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right" id="section4">
+                <div class="content">
+			<header>
+	                        <h2>Coviz</h2>
+				<p>Visualizing the Covid19 data for Portugal</p>
+			</header>
+
+                        <p class="minor"><br/>
+                            <strong>Disclaimer</strong></br>
+	                    This website is not an official source of information but rather an exercise of data visualization UX. The official dashboard can be found <a href="https://covid19.min-saude.pt/ponto-de-situacao-atual-em-portugal/">here</a>.
+                        </p>
+
+                        <p class="minor">
+                            <strong>Notes</strong></br>
+	                    Data is presented as a 7 day moving average to make reading the plots easier. The goal of this dashboard is allowing the visualization of mid term trends rather than the short term noise.
+                        </p>
+
+			<p class="minor"><strong>Credits</strong></br>
+                            The template for this website was adapted from <a href="https://html5up.net/story">HTML5UP</a>.<br/>
+		            The plots are made with <a href="https://bokeh.org">Bokeh</a>.<br/>
+			    Data is fetched daily from the <a href="https://github.com/dssg-pt/">DSSG-PT</a> repositories.<br/>
+			    The source code can be found <a href="https://github.com/ghomem/coviz/">here</a>.<br/>
+                        </p>
+
+			<p class="minor"><strong>Resources</strong></br>
+                            A project with online epidemic simulators can be found here <a href="https://github.com/ghomem/viraly/">here</a>.
+                        </p>
+
+			<ul class="actions small">
+                                <li><a href="#section3" class="button smooth-scroll small primary">Previous &uarr;</a></li>
+                       </ul>
+		</div>
+                <div class="image">
+                        <!-- <img src="images/banner.jpg" alt="" /> -->
+                </div>
+        </section>
+
+  </div>
+{% endblock %}
